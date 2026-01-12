@@ -358,9 +358,9 @@ app.post("/login", async (req, res) => {
 // ==========================================
 async function crearAdminPorDefecto() {
   try {
-    const cedulaAdmin = "0951586346";    // El usuario será "admin"
-    const nombreAdmin = "Johan Macias";
-    const claveAdmin = "admin2005";     // La contraseña será "admin"
+    const cedulaAdmin = "admin";    // El usuario será "admin"
+    const nombreAdmin = "Administrador";
+    const claveAdmin = "admin";     // La contraseña será "admin"
 
     // Verificamos si ya existe para no duplicarlo
     const check = await pool.query("SELECT * FROM usuarios WHERE cedula = $1", [cedulaAdmin]);
